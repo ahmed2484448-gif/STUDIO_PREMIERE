@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="12 أداة مونتاج داخل Premiere Pro: مزامنة الكاميرات، حذف السكوت، كابشن تلقائي، نسخ للريلز وتصدير لكل المنصات.">
+<meta name="description" content="أدوات أحمد عامر لـ Adobe Premiere Pro: Quds Studio Suite (12 أداة مونتاج)، FrameZone (مناطق آمنة للمنصات) و MotionLab (استوديو موشن جرافيك).">
 <meta property="og:title" content="Quds Studio Suite">
 <meta property="og:description" content="12 أداة مونتاج داخل Premiere Pro: مزامنة الكاميرات، حذف السكوت، كابشن تلقائي، نسخ للريلز وتصدير لكل المنصات.">
 <meta property="og:image" content="assets/og.jpg">
 <meta name="theme-color" content="#EFEFEF">
-<title>Quds Studio Suite</title>
+<title>Quds Studio · FrameZone · MotionLab — أدوات بريمير برو</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Readex+Pro:wght@300;400;500;600;700&display=swap">
@@ -198,6 +198,34 @@
   .fz { display: grid; gap: 34px; align-items: center; }
   .fz .fz-phone { margin: 0 auto; }
   .fz-info { gap: 22px; }
+  /* the three plugins */
+  #plugins { border-top: 1px solid var(--line); }
+  .plugs { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  .plug { display: grid; grid-template-rows: auto 1fr; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; background: var(--white); text-decoration: none; transition: transform .2s, border-color .2s; }
+  .plug:hover { transform: translateY(-3px); border-color: var(--ink); }
+  .plug .pic { aspect-ratio: 16 / 9; background: #111; overflow: hidden; }
+  .plug .pic img { width: 100%; height: 100%; object-fit: cover; }
+  .plug .body { display: grid; gap: 6px; padding: 16px 18px 18px; align-content: start; }
+  .plug h3 { font: 700 19px var(--body); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .plug p { margin: 0; color: var(--ink-2); font-size: 14px; }
+  .plug .cost { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 12px; margin-top: 6px; }
+  .plug .cost b { font: 700 22px var(--wide); direction: ltr; unicode-bidi: isolate; }
+  .plug .cost s { color: var(--muted); font-family: var(--wide); font-size: 13px; direction: ltr; unicode-bidi: isolate; }
+  .plug .cost small { color: var(--muted); font-size: 12.5px; }
+  .plug .go { margin-top: 10px; justify-self: start; }
+  @media (min-width: 860px) { .plugs { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+  .ml-shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 30px; }
+  .ml-shots figure { margin: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--white); }
+  .ml-shots img { width: 100%; height: auto; }
+  .ml-shots figcaption { padding: 8px 12px; font-size: 13px; color: var(--ink-2); }
+  @media (min-width: 860px) { .ml-shots { grid-template-columns: repeat(3, 1fr); gap: 14px; } }
+  .ml-plans { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .ml-plan { border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; background: var(--white); position: relative; }
+  .ml-plan.best { border-color: var(--gold); background: linear-gradient(160deg, #fff, #F7EFE4); }
+  .ml-plan small { display: block; color: var(--muted); font-size: 12.5px; }
+  .ml-plan b { display: block; font: 800 clamp(30px, 7vw, 46px)/1.1 var(--wide); direction: ltr; text-align: right; }
+  .ml-plan s { font: 500 14px var(--wide); color: var(--muted); }
+  .ml-plan .tagb { position: absolute; top: -11px; inset-inline-end: 12px; padding: 2px 10px; border-radius: 99px; background: var(--gold); color: #fff; font-size: 12px; font-weight: 600; }
   /* MotionLab (own page: motionlab/) */
   #motionlab { border-top: 1px solid var(--line); }
   .ml-grid { display: grid; gap: 22px; align-items: center; }
@@ -335,7 +363,7 @@
     <div class="nav">
       <a class="logo" href="#top">QUDS STUDIO</a>
       <nav class="links" id="links" aria-label="الأقسام">
-        <a href="#top">الرئيسية</a><a href="#about">عن البلاجن</a><a href="#tools">الأدوات</a><a href="#price">السعر</a><a href="#framezone">FrameZone</a><a href="motionlab/">MotionLab</a><a href="#install">التثبيت</a>
+        <a href="#top">الرئيسية</a><a href="#about">عن البلاجن</a><a href="#tools">الأدوات</a><a href="#price">السعر</a><a href="#plugins">البلاجنات</a><a href="#framezone">FrameZone</a><a href="#motionlab">MotionLab</a><a href="#install">التثبيت</a>
       </nav>
       <div class="nav-end">
         <a class="pill sm" href="#price">اشترك</a>
@@ -378,6 +406,35 @@
         <figure><img src="assets/about-sync.jpg" alt="مزامنة الكاميرات على الصوت" loading="lazy" width="960" height="640"><figcaption>مزامنة الكاميرات</figcaption></figure>
         <figure><img src="assets/about-silence.jpg" alt="حذف السكوت من الحوار" loading="lazy" width="960" height="640"><figcaption>حذف السكوت</figcaption></figure>
         <figure><img src="assets/about-captions.jpg" alt="كابشن تلقائي من الفيديو" loading="lazy" width="960" height="640"><figcaption>كابشن تلقائي</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="plugins">
+    <div class="wrap">
+      <div class="head"><h2>البلاجنات</h2><small>ثلاث أدوات لـ Adobe Premiere Pro — صنع أحمد عامر فرج الله</small></div>
+      <div class="plugs">
+        <a class="plug" href="#tools">
+          <div class="pic"><img src="assets/video-poster.jpg" alt="Quds Studio Suite" loading="lazy"></div>
+          <div class="body"><h3><bdi>Quds Studio Suite Pro</bdi></h3>
+            <p>12 أداة مونتاج: مزامنة الكاميرات، حذف السكوت، كابشن تلقائي، ضبط الصوت، نسخ للريلز وتصدير لكل المنصات.</p>
+            <div class="cost"><b>$15</b><small>/ سنة · تجربة 48 ساعة</small></div>
+            <span class="pill sm go">شوف الـ<bdi>12</bdi> أداة</span></div>
+        </a>
+        <a class="plug" href="#framezone">
+          <div class="pic"><img src="assets/framezone-poster.jpg" alt="FrameZone" loading="lazy"></div>
+          <div class="body"><h3><bdi>FrameZone</bdi></h3>
+            <p>المناطق الآمنة وواجهات 7 منصات فوق الفيديو مباشرة، مع شبكات وخطوط إرشادية — حتى ما تختفي نصوصك.</p>
+            <div class="cost"><b>40 ₪</b><s>60 ₪</s><small>خصم 33%</small></div>
+            <span class="pill sm go">شوف FrameZone</span></div>
+        </a>
+        <a class="plug" href="#motionlab">
+          <div class="pic"><img src="motionlab/assets/og.jpg" alt="MotionLab" loading="lazy"></div>
+          <div class="body"><h3><bdi>MotionLab</bdi> <span class="fz-new">جديد</span></h3>
+            <p>استوديو موشن جرافيك: انتقالات حقيقية، انتقالات بالذكاء الاصطناعي، كيفريمات ناعمة، مؤثرات صوتية ذكية، ألوان وقوالب عربية.</p>
+            <div class="cost"><b>$15</b><small>/ شهر</small><b>$160</b><s>$180</s><small>/ سنة</small></div>
+            <span class="pill sm go">شوف MotionLab</span></div>
+        </a>
       </div>
     </div>
   </section>
@@ -467,13 +524,43 @@
   <section id="motionlab">
     <div class="wrap">
       <div class="head"><h2><bdi class="nw">MotionLab</bdi> <span class="fz-new">جديد</span></h2><small>مختبر صناعة الحركات — استوديو موشن جرافيك داخل Premiere Pro</small></div>
-      <div class="ml-grid">
-        <a href="motionlab/"><img src="motionlab/assets/og.jpg" alt="MotionLab" loading="lazy" width="1200" height="675"></a>
-        <div>
-          <p>انتقالات حقيقية على الكليبات، استوديو انتقالات بالذكاء الاصطناعي، كيفريمات ناعمة بضغطة، مؤثرات صوتية ذكية، ألوان، تخطيطات وسائط وقوالب نصوص حركية عربية. تجربة مجانية 48 ساعة.</p>
-          <div class="ml-prices"><span>شهري <b>$15</b></span><span>سنوي <b>$160</b> <s>$180</s></span></div>
-          <a class="pill solid" href="motionlab/">اكتشف MotionLab</a>
+      <div class="fz">
+        <div class="product fz-phone">
+          <div class="phone"><video id="mlReel" src="motionlab/assets/reel.mp4" poster="motionlab/assets/reel-poster.jpg" controls playsinline preload="none"></video></div>
         </div>
+        <div class="fz-info price">
+          <div>
+            <div class="ml-plans">
+              <div class="ml-plan"><small>شهري</small><b>$15</b><small>/ شهر</small></div>
+              <div class="ml-plan best"><span class="tagb">وفّر <bdi dir="ltr">$20</bdi></span><small>سنوي <s>$180</s></small><b>$160</b><small>/ سنة</small></div>
+            </div>
+            <p class="note" style="margin-top:14px">تجربة مجانية كاملة 48 ساعة قبل الاشتراك.</p>
+          </div>
+          <div>
+            <h2>حرّك فيديوهاتك بدون After Effects</h2>
+            <ul>
+              <li><b>01</b>30 انتقال حقيقي على الكليبات + طبقات ضوء وفيلم وقليتش، ومازج وتطبيق على كل القطعات</li>
+              <li><b>02</b>استوديو انتقالات بالذكاء الاصطناعي: اكتب وصف بالعربي وبيتحوّل لانتقال</li>
+              <li><b>03</b>«خلّيها ناعمة»: تنعيم وسرعة وتتابع لكيفريماتك بضغطة</li>
+              <li><b>04</b>مؤثرات صوتية ذكية: صوت تلقائي لكل انتقال، خفض الموسيقى وعلامات الإيقاع</li>
+              <li><b>05</b>استوديو ألوان، تخطيطات وسائط ثلاثية الأبعاد، قوالب ونصوص حركية عربية ومكتبة MOGRT</li>
+            </ul>
+            <div class="actions">
+              <a class="pill solid" href="motionlab/#download">حمّل وجرّب مجاناً</a>
+              <a class="pill" href="https://wa.me/972598262172?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D9%81%D9%8A%20MotionLab" target="_blank" rel="noopener">اشترك عبر واتساب</a>
+              <a class="pill" href="motionlab/">كل التفاصيل</a>
+            </div>
+            <p class="note">بعد الطلب أرسل «رقم الجهاز» من نافذة التفعيل داخل البلاجن، ونرسل لك السريال.</p>
+          </div>
+        </div>
+      </div>
+      <div class="ml-shots">
+        <figure><img src="motionlab/assets/01-transitions.jpg" alt="" loading="lazy"><figcaption>استوديو الانتقالات</figcaption></figure>
+        <figure><img src="motionlab/assets/02-ai-transition.jpg" alt="" loading="lazy"><figcaption>انتقالات بالذكاء الاصطناعي</figcaption></figure>
+        <figure><img src="motionlab/assets/03-keyframes.jpg" alt="" loading="lazy"><figcaption>حركة وسرعة الكيفريمات</figcaption></figure>
+        <figure><img src="motionlab/assets/04-sound.jpg" alt="" loading="lazy"><figcaption>المؤثرات الصوتية</figcaption></figure>
+        <figure><img src="motionlab/assets/05-color.jpg" alt="" loading="lazy"><figcaption>استوديو الألوان</figcaption></figure>
+        <figure><img src="motionlab/assets/07-templates.jpg" alt="" loading="lazy"><figcaption>القوالب والنصوص الحركية</figcaption></figure>
       </div>
     </div>
   </section>
@@ -503,7 +590,8 @@
         <div>الكابشن التلقائي<b>مفتاح Groq مجاني</b></div>
       </div>
       <div class="faq">
-        <details open><summary>كم سعر الاشتراك؟</summary><p><span class="num">$15</span> لمدة سنة كاملة، بعد تجربة مجانية 48 ساعة تستخدم فيها كل الأدوات.</p></details>
+        <details open><summary>كم أسعار البلاجنات؟</summary><p><b>Quds Studio Suite Pro</b>: <span class="num">$15</span> لسنة كاملة · <b>FrameZone</b>: <span class="num">40 ₪</span> بدل <s class="num">60 ₪</s> · <b>MotionLab</b>: <span class="num">$15</span> شهرياً أو <span class="num">$160</span> سنوياً بدل <s class="num">$180</s>. وللطلب تواصل معي على واتساب.</p></details>
+        <details><summary>كم سعر اشتراك Quds Studio؟</summary><p><span class="num">$15</span> لمدة سنة كاملة، بعد تجربة مجانية 48 ساعة تستخدم فيها كل الأدوات.</p></details>
         <details><summary>كيف أحصل على السريال؟</summary><p>افتح تبويب «حول» داخل البلاجن وانسخ «رقم الجهاز»، ثم أرسله لنا على واتساب (أو اضغط «طلب سريال» داخل البلاجن). نرسل لك سريالاً خاصاً بجهازك تلصقه في نافذة التفعيل.</p></details>
         <details><summary>هل يعمل السريال على أكثر من جهاز؟</summary><p>لا، كل سريال مرتبط بجهاز واحد. إذا غيّرت جهازك أو أعدت تثبيت النظام أرسل لنا رقم الجهاز الجديد.</p></details>
         <details><summary>ماذا يحدث عند انتهاء الاشتراك؟</summary><p>يتوقف البلاجن حتى تدخل سريال التجديد، ويبقى مشروعك في Premiere كما هو.</p></details>
@@ -516,7 +604,7 @@
   <section class="contact" id="contact">
     <div class="wrap">
       <h2>للطلب والاستفسار</h2>
-      <p class="by">هذا البلاجن صنع بواسطة <b>أحمد عامر فرج الله</b></p>
+      <p class="by">Quds Studio Suite · FrameZone · MotionLab — صنع بواسطة <b>أحمد عامر فرج الله</b></p>
       <div class="phone-num">
         <span class="num" id="waNum">+972 59-826-2172</span>
         <span class="btns"><button class="pill" id="copyNum" type="button">نسخ الرقم</button>
